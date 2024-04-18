@@ -4,7 +4,7 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-application-delevel.yml
+!**/src/main/resources/application-delevel.yml
 
 ### STS ###
 .apt_generated
