@@ -1,5 +1,7 @@
 package com.curso.spring.dto;
 
+import com.curso.spring.model.Direcciones;
+import com.curso.spring.model.Empleos;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,15 +16,15 @@ public class PersonaDto {
 
     private String nombre;
 
-    private Integer direccionId;
+    private Direcciones direccionId;
 
-    private Integer empleoId;
+    private Empleos empleoId;
 
     private PersonaDto () {
 
     }
 
-    public PersonaDto(Long personaId, String nombre, Integer direccionId, Integer empleoId) {
+    public PersonaDto(Long personaId, String nombre, Direcciones direccionId, Empleos empleoId) {
         this.personaId = personaId;
         this.nombre = nombre;
         this.direccionId = direccionId;

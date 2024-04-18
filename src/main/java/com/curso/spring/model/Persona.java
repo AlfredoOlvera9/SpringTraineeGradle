@@ -26,10 +26,15 @@ public class Persona {
  //   @Column(name= "genero")
     private String genero;
 
-    @Column(name= "direccion_id")
-    private Integer direccionId;
 
-    @Column(name= "empleo_id")
-    private Integer empleoId;
+    @ManyToOne
+    @JoinColumn(name= "direccion_id")
+    private Direcciones direccionId;
+
+
+    @ManyToOne
+    @JoinColumn(name= "empleo_id")
+    private Empleos empleoId;
+
 
 }
