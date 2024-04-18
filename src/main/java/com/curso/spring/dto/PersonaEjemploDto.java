@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
@@ -14,7 +13,7 @@ import javax.validation.constraints.Pattern;
 @AllArgsConstructor
 @ToString
 
-public class Persona {
+public class PersonaEjemploDto {
 
     @NotNull(message = "El campó nomnbre no pude ser vacio")
     private String nombre;
@@ -29,10 +28,10 @@ public class Persona {
 
     private String apellidoMaterno;
 
-    @Pattern(regexp = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$")
+ //   @Pattern(regexp = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$")
     private String email;
 
-    public Persona (){
+    public PersonaEjemploDto(){
 
     }
 

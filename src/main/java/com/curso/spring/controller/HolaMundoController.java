@@ -1,6 +1,6 @@
 package com.curso.spring.controller;
 
-import com.curso.spring.dto.Persona;
+import com.curso.spring.dto.PersonaEjemploDto;
 import com.curso.spring.service.IEjerciciosService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -21,8 +21,6 @@ public class HolaMundoController {
     @Autowired
     private IEjerciciosService ejerciciosService;
 
-
-
     @GetMapping("/hola")
     @Operation(summary = "Operacion para mostrar hola mundo")
     public String holaMundo (){
@@ -39,15 +37,14 @@ public class HolaMundoController {
     }
 
     @PostMapping("/persona")
-    public Persona datosPersona( @Valid @RequestBody Persona persona){
+    public PersonaEjemploDto datosPersona(@Valid @RequestBody PersonaEjemploDto personaEjemploDto){
 
-        return persona;
+        return personaEjemploDto;
     }
 
     @GetMapping("/nombres")
     public List<String> nombre (){
         return ejerciciosService.getNombres();
     }
-
 
 }
