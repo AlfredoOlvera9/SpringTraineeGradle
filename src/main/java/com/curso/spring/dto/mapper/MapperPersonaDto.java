@@ -37,7 +37,7 @@ public class MapperPersonaDto {
             throw new RuntimeException("Debe pasar el entity Persona ");
         }
 
-        return new PersonaDto(this.persona.getPersonaId(), persona.getNombre(), persona.getDireccionId(), persona.getEmpleoId());
+        return new PersonaDto(this.persona.getPersonaId(), persona.getNombre(),persona.getEdad(),persona.getGenero(), persona.getDireccionId(), persona.getEmpleoId());
 
     }
 

@@ -24,4 +24,10 @@ public class Empleos {
 
     private BigDecimal salario;
 
+    public Empleos(){
+
+    }
+
+    public Empleos(Long empleoId) {
+    }
 }

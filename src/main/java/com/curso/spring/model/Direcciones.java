@@ -22,6 +22,13 @@ public class Direcciones {
 
     private String estado;
 
+    @Column(name = "codigo_postal")
     private String codigoPostal;
+
+    public Direcciones(){
+
+    }
+    public Direcciones(Long direccionId) {
+    }
 }
 

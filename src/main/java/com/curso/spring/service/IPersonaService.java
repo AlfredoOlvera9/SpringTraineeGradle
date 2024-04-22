@@ -1,13 +1,16 @@
 package com.curso.spring.service;
 
 
+import com.curso.spring.dto.PersonaCreacionDTO;
 import com.curso.spring.dto.PersonaDto;
+import com.curso.spring.dto.request.CrearPersonaRequest;
 import com.curso.spring.dto.request.PersonaRequest;
 import com.curso.spring.dto.response.DatosPersonaResponse;
 import com.curso.spring.model.Persona;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Objects;
 
@@ -30,4 +33,15 @@ public interface IPersonaService {
     public List<String> getNombrePersonaByGenero(String genero);
 
     ResponseEntity<Object> getInfoPersona(@PathVariable Integer id);
+
+    ResponseEntity<?> savePersonaNative(PersonaRequest request);
+    ResponseEntity<?> updatePersonaNative(PersonaRequest request) throws Exception;
+
+    boolean deletePersonNative (Long id) throws Exception;
+
+    // AGREGAMOS EL METODO PARA CREAR DIRECCION,EMPLEO EN LA PERSONA
+
+    ResponseEntity<?> crearPersonasConEmpleoYDireccion(PersonaCreacionDTO personaDTO);
+
+    PersonaCreacionDTO crearPersonaConEmpleoYDireccion(CrearPersonaRequest request);
 }

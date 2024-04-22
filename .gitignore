@@ -5,6 +5,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 !**/src/main/**/application-delevel.yml
+application-delevel.yml
 
 ### STS ###
 .apt_generated
@@ -33,6 +34,7 @@ out/
 /dist/
 /nbdist/
 /.nb-gradle/
+
 
 ### VS Code ###
 .vscode/
